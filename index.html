@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="height: auto; min-height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة المقاولات الوطنية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="height: auto; min-height: 100%;" class="bg-gray-50">
+
+    <div class="flex flex-col">
+
+        <!-- Header -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <nav class="hidden md:flex space-x-reverse space-x-8">
+                        <a href="#home"
+                            class="text-gray-700 hover:text-orange-500 font-semibold transition duration-300">الرئيسية</a>
+                        <a href="#about"
+                            class="text-gray-700 hover:text-orange-500 font-semibold transition duration-300">من نحن</a>
+                        <a href="#projects"
+                            class="text-gray-700 hover:text-orange-500 font-semibold transition duration-300">المشاريع</a>
+                        <a href="#contact"
+                            class="text-gray-700 hover:text-orange-500 font-semibold transition duration-300">اتصل
+                            بنا</a>
+                    </nav>
+                    <div class="flex items-center space-x-reverse space-x-4">
+                        <div class="text-right">
+                            <h1 class="text-xl md:text-2xl font-bold text-blue-900">شركة المقاولات الوطنية</h1>
+                            <p class="text-sm text-gray-600">خبرة وجودة في البناء</p>
+                        </div>
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Home Page -->
+        <main id="home">
+            <!-- Hero Slider -->
+            <section class="relative">
+                <div class="swiper heroSwiper h-screen">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="relative h-screen">
+                                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop"
+                                    alt="مشروع بناء" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center">
+                                    <div class="text-center text-white px-4">
+                                        <h2 class="text-4xl md:text-6xl font-bold mb-6">شركة المقاولات الوطنية</h2>
+                                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">خبرة في تنفيذ المشروعات
+                                            السكنية والتجارية بجودة والتزام تام بالمواعيد</p>
+                                        <a href="#projects"
+                                            class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">استعرض
+                                            مشاريعنا</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative h-screen">
+                                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&h=1080&fit=crop"
+                                    alt="بناء حديث" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center">
+                                    <div class="text-center text-white px-4">
+                                        <h2 class="text-4xl md:text-6xl font-bold mb-6">نبني المستقبل معاً</h2>
+                                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">مشاريع متميزة بأعلى معايير
+                                            الجودة والسلامة</p>
+                                        <a href="#contact"
+                                            class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">اتصل
+                                            بنا الآن</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative h-screen">
+                                <img src="https://images.unsplash.com/photo-1590496793907-4d0b8e5d0e8e?w=1920&h=1080&fit=crop"
+                                    alt="مشروع سكني" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center">
+                                    <div class="text-center text-white px-4">
+                                        <h2 class="text-4xl md:text-6xl font-bold mb-6">25 عاماً من الخبرة</h2>
+                                        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">أكثر من 120 مشروع ناجح في
+                                            جميع أنحاء البلاد</p>
+                                        <a href="#about"
+                                            class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">اعرف
+                                            المزيد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Latest Projects -->
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-blue-900 mb-4">أحدث المشاريع</h2>
+                        <p class="text-gray-600 text-lg">تعرف على آخر إنجازاتنا في مجال البناء والتشييد</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop"
+                                alt="مشروع سكني" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">مجمع الياسمين السكني</h3>
+                                <p class="text-gray-600 mb-4"><i
+                                        class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - حي النرجس</p>
+                                <p class="text-gray-700 mb-4">مشروع سكني متكامل يضم 50 وحدة سكنية فاخرة</p>
+                                <a href="#project-details"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                    المشروع</a>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                                alt="مشروع تجاري" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">برج الأعمال التجاري</h3>
+                                <p class="text-gray-600 mb-4"><i
+                                        class="fas fa-map-marker-alt text-orange-500 ml-2"></i>جدة - الكورنيش</p>
+                                <p class="text-gray-700 mb-4">برج تجاري حديث بـ 20 طابق ومرافق متطورة</p>
+                                <a href="#project-details"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                    المشروع</a>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop"
+                                alt="مشروع فيلات" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-blue-900 mb-2">فلل الواحة الراقية</h3>
+                                <p class="text-gray-600 mb-4"><i
+                                        class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الدمام - حي الشاطئ</p>
+                                <p class="text-gray-700 mb-4">مجموعة فلل فاخرة بتصاميم عصرية ومساحات واسعة</p>
+                                <a href="#project-details"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                    المشروع</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="#projects"
+                            class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">عرض
+                            جميع المشاريع</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Preview -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
+                                alt="عن الشركة" class="rounded-lg shadow-xl">
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <h2 class="text-4xl font-bold text-blue-900 mb-6">من نحن</h2>
+                            <p class="text-gray-700 text-lg mb-6 leading-relaxed">شركة المقاولات الوطنية هي إحدى الشركات
+                                الرائدة في مجال البناء والتشييد في المملكة. نتمتع بخبرة تمتد لأكثر من 25 عاماً في تنفيذ
+                                المشاريع السكنية والتجارية والصناعية بأعلى معايير الجودة والاحترافية.</p>
+                            <p class="text-gray-700 text-lg mb-8 leading-relaxed">نلتزم بتقديم حلول بناء متكاملة تلبي
+                                احتياجات عملائنا وتتجاوز توقعاتهم، مع الحفاظ على أعلى معايير السلامة والجودة في جميع
+                                مراحل العمل.</p>
+                            <a href="#about"
+                                class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">المزيد
+                                عنا</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- About Page -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-blue-900 mb-6">من نحن</h2>
+                    <p class="text-gray-700 text-xl max-w-4xl mx-auto leading-relaxed">شركة المقاولات الوطنية تأسست عام
+                        1998 برؤية واضحة لتكون الخيار الأول في مجال البناء والتشييد. على مدار 25 عاماً من العمل
+                        المتواصل، نجحنا في بناء سمعة قوية تقوم على الجودة والالتزام والاحترافية. نفخر بفريق عمل متخصص
+                        ومعدات حديثة تمكننا من تنفيذ المشاريع بأعلى المعايير العالمية.</p>
+                </div>
+
+                <!-- Services -->
+                <div class="mb-20">
+                    <h3 class="text-3xl font-bold text-blue-900 text-center mb-12">خدماتنا</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div
+                            class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                            <div
+                                class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-building text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-blue-900 mb-4">إنشائات</h4>
+                            <p class="text-gray-600">تنفيذ المباني السكنية والتجارية بأحدث التقنيات وأعلى معايير الجودة
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                            <div
+                                class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-paint-roller text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-blue-900 mb-4">تشطيب</h4>
+                            <p class="text-gray-600">أعمال التشطيب الداخلي والخارجي بلمسات فنية احترافية</p>
+                        </div>
+                        <div
+                            class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                            <div
+                                class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-road text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-blue-900 mb-4">أعمال مدنية</h4>
+                            <p class="text-gray-600">تنفيذ البنية التحتية والطرق والجسور بكفاءة عالية</p>
+                        </div>
+                        <div
+                            class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                            <div
+                                class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-bolt text-white text-3xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-blue-900 mb-4">كهرباء وسباكة</h4>
+                            <p class="text-gray-600">أنظمة كهربائية وصحية متكاملة وفق المواصفات العالمية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Standards -->
+                <div class="mb-20">
+                    <h3 class="text-3xl font-bold text-blue-900 text-center mb-12">معايير الجودة</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                            <div
+                                class="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-award text-white text-4xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-blue-900 mb-4">الجودة</h4>
+                            <p class="text-gray-600 text-lg">نلتزم بأعلى معايير الجودة في جميع مراحل العمل من التخطيط
+                                حتى التسليم</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                            <div
+                                class="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-clock text-white text-4xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-blue-900 mb-4">الالتزام بالمواعيد</h4>
+                            <p class="text-gray-600 text-lg">نحرص على تسليم المشاريع في الوقت المحدد دون أي تأخير</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                            <div
+                                class="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-hard-hat text-white text-4xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-blue-900 mb-4">السلامة</h4>
+                            <p class="text-gray-600 text-lg">نطبق أعلى معايير السلامة لحماية العاملين والمشروع</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What We Offer -->
+                <div class="mb-20">
+                    <h3 class="text-3xl font-bold text-blue-900 text-center mb-12">ما نقدمه</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-reverse space-x-4">
+                            <i class="fas fa-check-circle text-orange-500 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900 mb-2">استشارات هندسية متخصصة</h4>
+                                <p class="text-gray-600">فريق من المهندسين المعتمدين لتقديم أفضل الحلول الهندسية</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-reverse space-x-4">
+                            <i class="fas fa-check-circle text-orange-500 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900 mb-2">تصاميم معمارية مبتكرة</h4>
+                                <p class="text-gray-600">تصاميم عصرية تجمع بين الجمال والوظيفية</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-reverse space-x-4">
+                            <i class="fas fa-check-circle text-orange-500 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900 mb-2">إدارة مشاريع احترافية</h4>
+                                <p class="text-gray-600">متابعة دقيقة لجميع مراحل المشروع من البداية للنهاية</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-reverse space-x-4">
+                            <i class="fas fa-check-circle text-orange-500 text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900 mb-2">ضمان ما بعد التسليم</h4>
+                                <p class="text-gray-600">خدمة صيانة ومتابعة لضمان رضا العملاء التام</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="bg-blue-900 rounded-2xl p-12" x-data="{ 
+            projects: 0, 
+            years: 0, 
+            satisfaction: 0, 
+            support: 0,
+            animated: false,
+            animateCounters() {
+                if (this.animated) return;
+                this.animated = true;
+                const duration = 2000;
+                const steps = 60;
+                const projectsIncrement = 120 / steps;
+                const yearsIncrement = 25 / steps;
+                const satisfactionIncrement = 100 / steps;
+                const supportIncrement = 24 / steps;
+                let currentStep = 0;
+                const interval = setInterval(() => {
+                    currentStep++;
+                    this.projects = Math.min(Math.floor(projectsIncrement * currentStep), 120);
+                    this.years = Math.min(Math.floor(yearsIncrement * currentStep), 25);
+                    this.satisfaction = Math.min(Math.floor(satisfactionIncrement * currentStep), 100);
+                    this.support = Math.min(Math.floor(supportIncrement * currentStep), 24);
+                    if (currentStep >= steps) clearInterval(interval);
+                }, duration / steps);
+            }
+        }" x-intersect="animateCounters()">
+                    <h3 class="text-3xl font-bold text-white text-center mb-12">إحصائياتنا</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="projects">0</span>+</div>
+                            <p class="text-white text-xl">مشروع مكتمل</p>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="years">0</span></div>
+                            <p class="text-white text-xl">سنة من الخبرة</p>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="satisfaction">0</span>%
+                            </div>
+                            <p class="text-white text-xl">رضا العملاء</p>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="support">0</span>/7</div>
+                            <p class="text-white text-xl">دعم فني</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact"
+                        class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105">اتصل
+                        بنا</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-blue-900 mb-6">مشاريعنا</h2>
+                    <p class="text-gray-600 text-xl">استعرض مجموعة من أبرز مشاريعنا المنفذة بنجاح</p>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        class="bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition duration-300">الكل</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">سكني</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">تجاري</button>
+                    <button
+                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">صناعي</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop"
+                            alt="مشروع سكني" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-orange-500 text-white text-sm px-3 py-1 rounded-full mb-3">سكني</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">مجمع الياسمين السكني</h3>
+                            <p class="text-gray-600 mb-4"><i
+                                    class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - حي النرجس</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                            alt="مشروع تجاري" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-blue-900 text-white text-sm px-3 py-1 rounded-full mb-3">تجاري</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">برج الأعمال التجاري</h3>
+                            <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt text-orange-500 ml-2"></i>جدة
+                                - الكورنيش</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop"
+                            alt="مشروع فيلات" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-orange-500 text-white text-sm px-3 py-1 rounded-full mb-3">سكني</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">فلل الواحة الراقية</h3>
+                            <p class="text-gray-600 mb-4"><i
+                                    class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الدمام - حي الشاطئ</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=600&h=400&fit=crop"
+                            alt="مشروع مول" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-blue-900 text-white text-sm px-3 py-1 rounded-full mb-3">تجاري</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">مول النخيل التجاري</h3>
+                            <p class="text-gray-600 mb-4"><i
+                                    class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الخبر - الكورنيش</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
+                            alt="مشروع مكاتب" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-blue-900 text-white text-sm px-3 py-1 rounded-full mb-3">تجاري</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">مركز الأعمال الدولي</h3>
+                            <p class="text-gray-600 mb-4"><i
+                                    class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - العليا</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&h=400&fit=crop"
+                            alt="مشروع مصنع" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span
+                                class="inline-block bg-gray-700 text-white text-sm px-3 py-1 rounded-full mb-3">صناعي</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">مجمع المصانع الصناعي</h3>
+                            <p class="text-gray-600 mb-4"><i
+                                    class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الجبيل - المنطقة الصناعية</p>
+                            <a href="#project-details"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                المشروع</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Details Page -->
+        <section id="project-details" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Project Images Slider -->
+                    <div class="mb-12">
+                        <div class="swiper projectSwiper rounded-lg shadow-xl mb-4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=600&fit=crop"
+                                        alt="صورة المشروع 1" class="w-full h-96 object-cover">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=600&fit=crop"
+                                        alt="صورة المشروع 2" class="w-full h-96 object-cover">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1590496793907-4d0b8e5d0e8e?w=1200&h=600&fit=crop"
+                                        alt="صورة المشروع 3" class="w-full h-96 object-cover">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=600&fit=crop"
+                                        alt="صورة المشروع 4" class="w-full h-96 object-cover">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper projectThumbsSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide cursor-pointer">
+                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&h=150&fit=crop"
+                                        alt="صورة مصغرة 1" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <div class="swiper-slide cursor-pointer">
+                                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=200&h=150&fit=crop"
+                                        alt="صورة مصغرة 2" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <div class="swiper-slide cursor-pointer">
+                                    <img src="https://images.unsplash.com/photo-1590496793907-4d0b8e5d0e8e?w=200&h=150&fit=crop"
+                                        alt="صورة مصغرة 3" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <div class="swiper-slide cursor-pointer">
+                                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=200&h=150&fit=crop"
+                                        alt="صورة مصغرة 4" class="w-full h-24 object-cover rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="lg:col-span-2">
+                            <h1 class="text-4xl font-bold text-blue-900 mb-6">مجمع الياسمين السكني</h1>
+                            <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                                <h2 class="text-2xl font-bold text-blue-900 mb-4">نبذة عن المشروع</h2>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-4">مجمع الياسمين السكني هو مشروع سكني
+                                    متكامل يقع في حي النرجس بالرياض، يضم 50 وحدة سكنية فاخرة تم تصميمها وفق أحدث
+                                    المعايير العالمية. المشروع يتميز بموقعه الاستراتيجي وقربه من جميع الخدمات الأساسية.
+                                </p>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-4">تم استخدام أفضل مواد البناء
+                                    والتشطيب في تنفيذ المشروع، مع الحرص على تطبيق أعلى معايير الجودة والسلامة في جميع
+                                    مراحل العمل. المشروع يشمل مرافق متكاملة تضم حدائق، مواقف سيارات، وأنظمة أمن متطورة.
+                                </p>
+                                <p class="text-gray-700 text-lg leading-relaxed">استغرق تنفيذ المشروع 18 شهراً من العمل
+                                    المتواصل، وتم تسليمه للعملاء في الموعد المحدد بجودة تفوق التوقعات. المشروع حاز على
+                                    رضا تام من جميع العملاء وأصبح نموذجاً يحتذى به في المنطقة.</p>
+                            </div>
+                            <div class="bg-white p-8 rounded-lg shadow-lg">
+                                <h2 class="text-2xl font-bold text-blue-900 mb-4">مراحل التنفيذ</h2>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-reverse space-x-4">
+                                        <div
+                                            class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-lg font-bold text-blue-900 mb-2">التخطيط والتصميم</h3>
+                                            <p class="text-gray-600">إعداد المخططات الهندسية والحصول على التراخيص
+                                                اللازمة</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-reverse space-x-4">
+                                        <div
+                                            class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-lg font-bold text-blue-900 mb-2">الأعمال الإنشائية</h3>
+                                            <p class="text-gray-600">تنفيذ الأساسات والهيكل الخرساني للمباني</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-reverse space-x-4">
+                                        <div
+                                            class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-lg font-bold text-blue-900 mb-2">أعمال التشطيب</h3>
+                                            <p class="text-gray-600">تركيب الأنظمة الكهربائية والصحية والتشطيبات
+                                                الداخلية</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-reverse space-x-4">
+                                        <div
+                                            class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold">4</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-lg font-bold text-blue-900 mb-2">التسليم والضمان</h3>
+                                            <p class="text-gray-600">فحص نهائي وتسليم الوحدات مع ضمان شامل</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar -->
+                        <div class="lg:col-span-1">
+                            <div class="bg-white p-6 rounded-lg shadow-lg mb-6 sticky top-24">
+                                <h3 class="text-xl font-bold text-blue-900 mb-6">تفاصيل المشروع</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                                        <span class="text-gray-600">الموقع</span>
+                                        <span class="font-semibold text-blue-900">الرياض - حي النرجس</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                                        <span class="text-gray-600">تاريخ البدء</span>
+                                        <span class="font-semibold text-blue-900">يناير 2022</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                                        <span class="text-gray-600">تاريخ الانتهاء</span>
+                                        <span class="font-semibold text-blue-900">يونيو 2023</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                                        <span class="text-gray-600">عدد الوحدات</span>
+                                        <span class="font-semibold text-blue-900">50 وحدة</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                                        <span class="text-gray-600">المساحة الإجمالية</span>
+                                        <span class="font-semibold text-blue-900">15,000 م²</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-600">عدد الصور</span>
+                                        <span class="font-semibold text-blue-900">24 صورة</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Section -->
+                            <div
+                                class="bg-gradient-to-br from-blue-900 to-blue-700 p-8 rounded-lg shadow-lg text-center text-white">
+                                <h3 class="text-2xl font-bold mb-4">مهتم بمشروع مماثل؟</h3>
+                                <p class="mb-6">تواصل معنا الآن للحصول على استشارة مجانية</p>
+                                <a href="#contact"
+                                    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 mb-4 w-full">اتصل
+                                    بنا</a>
+                                <div class="flex justify-center space-x-reverse space-x-4">
+                                    <button class="text-white hover:text-orange-500 transition duration-300">
+                                        <i class="fas fa-share-alt text-xl"></i>
+                                    </button>
+                                    <button class="text-white hover:text-orange-500 transition duration-300">
+                                        <i class="fas fa-download text-xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-blue-900 mb-6">اتصل بنا</h2>
+                    <p class="text-gray-600 text-xl">نحن هنا للإجابة على استفساراتكم ومساعدتكم في تحقيق مشاريعكم</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Contact Information -->
+                    <div>
+                        <div
+                            class="bg-gradient-to-br from-blue-900 to-blue-700 p-8 rounded-lg shadow-xl text-white mb-8">
+                            <h3 class="text-2xl font-bold mb-6">معلومات التواصل</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-reverse space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">العنوان</h4>
+                                        <p>الرياض، المملكة العربية السعودية<br>حي العليا، شارع الملك فهد</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-reverse space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">البريد الإلكتروني</h4>
+                                        <a href="mailto:info@company.com"
+                                            class="hover:text-orange-500 transition duration-300">info@company.com</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-reverse space-x-4">
+                                    <div
+                                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-phone text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-2">الهاتف</h4>
+                                        <a href="tel:+21032156290"
+                                            class="hover:text-orange-500 transition duration-300">+210 321 56290</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-blue-900 mb-6">تابعنا على</h3>
+                            <div class="flex justify-center space-x-reverse space-x-6">
+                                <a href="https://facebook.com" target="_blank"
+                                    class="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition duration-300 transform hover:scale-110">
+                                    <i class="fab fa-facebook-f text-2xl"></i>
+                                </a>
+                                <a href="https://telegram.org" target="_blank"
+                                    class="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition duration-300 transform hover:scale-110">
+                                    <i class="fab fa-telegram-plane text-2xl"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank"
+                                    class="w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 rounded-full flex items-center justify-center text-white transition duration-300 transform hover:scale-110">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">أرسل لنا رسالة</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">الاسم الكامل</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
+                                    placeholder="أدخل اسمك الكامل">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
+                                    placeholder="example@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">الموضوع</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
+                                    placeholder="موضوع الرسالة">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">الرسالة</label>
+                                <textarea rows="5"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
+                                    placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-lg transition duration-300 transform hover:scale-105">إرسال</button>
+                        </form>
+                        <div class="mt-6">
+                            <a href="https://wa.me/+21032156290?text=السلام%20عليكم" target="_blank"
+                                class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                                <i class="fab fa-whatsapp text-xl ml-2"></i>
+                                إرسال عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-blue-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-reverse space-x-4 mb-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-building text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">شركة المقاولات الوطنية</h3>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">شركة رائدة في مجال البناء والتشييد، نقدم حلولاً متكاملة
+                            بأعلى معايير الجودة والاحترافية منذ عام 1998.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">روابط سريعة</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home"
+                                    class="text-gray-300 hover:text-orange-500 transition duration-300">الرئيسية</a>
+                            </li>
+                            <li><a href="#about" class="text-gray-300 hover:text-orange-500 transition duration-300">من
+                                    نحن</a></li>
+                            <li><a href="#projects"
+                                    class="text-gray-300 hover:text-orange-500 transition duration-300">المشاريع</a>
+                            </li>
+                            <li><a href="#contact"
+                                    class="text-gray-300 hover:text-orange-500 transition duration-300">اتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">تابعنا</h4>
+                        <div class="flex space-x-reverse space-x-4">
+                            <a href="https://facebook.com" target="_blank"
+                                class="w-10 h-10 bg-white bg-opacity-20 hover:bg-orange-500 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://telegram.org" target="_blank"
+                                class="w-10 h-10 bg-white bg-opacity-20 hover:bg-orange-500 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank"
+                                class="w-10 h-10 bg-white bg-opacity-20 hover:bg-orange-500 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-8 text-center">
+                    <p class="text-gray-300">© 2024 شركة المقاولات الوطنية. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/+21032156290" target="_blank"
+            class="fixed bottom-6 left-6 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-2xl transition duration-300 transform hover:scale-110 z-50">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+
+    </div>
+
+    <script defer src="scripts.js"></script>
+
+</body>
+
+</html>
