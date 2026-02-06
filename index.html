@@ -130,8 +130,8 @@
                                 <p class="text-gray-600 mb-4"><i
                                         class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - حي النرجس</p>
                                 <p class="text-gray-700 mb-4">مشروع سكني متكامل يضم 50 وحدة سكنية فاخرة</p>
-                                <a href="#project-details"
-                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                <a href="#project-details" data-project="yasmin"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                     المشروع</a>
                             </div>
                         </div>
@@ -144,8 +144,8 @@
                                 <p class="text-gray-600 mb-4"><i
                                         class="fas fa-map-marker-alt text-orange-500 ml-2"></i>جدة - الكورنيش</p>
                                 <p class="text-gray-700 mb-4">برج تجاري حديث بـ 20 طابق ومرافق متطورة</p>
-                                <a href="#project-details"
-                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                <a href="#project-details" data-project="business-tower"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                     المشروع</a>
                             </div>
                         </div>
@@ -158,8 +158,8 @@
                                 <p class="text-gray-600 mb-4"><i
                                         class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الدمام - حي الشاطئ</p>
                                 <p class="text-gray-700 mb-4">مجموعة فلل فاخرة بتصاميم عصرية ومساحات واسعة</p>
-                                <a href="#project-details"
-                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                                <a href="#project-details" data-project="oasis-villas"
+                                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                     المشروع</a>
                             </div>
                         </div>
@@ -320,49 +320,23 @@
                 </div>
 
                 <!-- Statistics -->
-                <div class="bg-blue-900 rounded-2xl p-12" x-data="{ 
-            projects: 0, 
-            years: 0, 
-            satisfaction: 0, 
-            support: 0,
-            animated: false,
-            animateCounters() {
-                if (this.animated) return;
-                this.animated = true;
-                const duration = 2000;
-                const steps = 60;
-                const projectsIncrement = 120 / steps;
-                const yearsIncrement = 25 / steps;
-                const satisfactionIncrement = 100 / steps;
-                const supportIncrement = 24 / steps;
-                let currentStep = 0;
-                const interval = setInterval(() => {
-                    currentStep++;
-                    this.projects = Math.min(Math.floor(projectsIncrement * currentStep), 120);
-                    this.years = Math.min(Math.floor(yearsIncrement * currentStep), 25);
-                    this.satisfaction = Math.min(Math.floor(satisfactionIncrement * currentStep), 100);
-                    this.support = Math.min(Math.floor(supportIncrement * currentStep), 24);
-                    if (currentStep >= steps) clearInterval(interval);
-                }, duration / steps);
-            }
-        }" x-intersect="animateCounters()">
+                <div class="bg-blue-900 rounded-2xl p-12">
                     <h3 class="text-3xl font-bold text-white text-center mb-12">إحصائياتنا</h3>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                         <div>
-                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="projects">0</span>+</div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2">12+</div>
                             <p class="text-white text-xl">مشروع مكتمل</p>
                         </div>
                         <div>
-                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="years">0</span></div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2">25</div>
                             <p class="text-white text-xl">سنة من الخبرة</p>
                         </div>
                         <div>
-                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="satisfaction">0</span>%
-                            </div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2">100%</div>
                             <p class="text-white text-xl">رضا العملاء</p>
                         </div>
                         <div>
-                            <div class="text-5xl font-bold text-orange-500 mb-2"><span x-text="support">0</span>/7</div>
+                            <div class="text-5xl font-bold text-orange-500 mb-2">24/7</div>
                             <p class="text-white text-xl">دعم فني</p>
                         </div>
                     </div>
@@ -386,20 +360,24 @@
 
                 <!-- Filter Bar -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button
-                        class="bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition duration-300">الكل</button>
-                    <button
-                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">سكني</button>
-                    <button
-                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">تجاري</button>
-                    <button
-                        class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300">صناعي</button>
+                    <button id="filter-all"
+                        class="filter-btn bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 active"
+                        data-filter="all">الكل</button>
+                    <button id="filter-residential"
+                        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
+                        data-filter="سكني">سكني</button>
+                    <button id="filter-commercial"
+                        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
+                        data-filter="تجاري">تجاري</button>
+                    <button id="filter-industrial"
+                        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
+                        data-filter="صناعي">صناعي</button>
                 </div>
 
                 <!-- Projects Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="سكني" data-project="yasmin">
                         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop"
                             alt="مشروع سكني" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -408,13 +386,13 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">مجمع الياسمين السكني</h3>
                             <p class="text-gray-600 mb-4"><i
                                     class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - حي النرجس</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="yasmin"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="تجاري" data-project="business-tower">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
                             alt="مشروع تجاري" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -423,13 +401,13 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">برج الأعمال التجاري</h3>
                             <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt text-orange-500 ml-2"></i>جدة
                                 - الكورنيش</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="business-tower"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="سكني" data-project="oasis-villas">
                         <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop"
                             alt="مشروع فيلات" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -438,13 +416,13 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">فلل الواحة الراقية</h3>
                             <p class="text-gray-600 mb-4"><i
                                     class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الدمام - حي الشاطئ</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="oasis-villas"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="تجاري" data-project="nakheel-mall">
                         <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=600&h=400&fit=crop"
                             alt="مشروع مول" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -453,13 +431,13 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">مول النخيل التجاري</h3>
                             <p class="text-gray-600 mb-4"><i
                                     class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الخبر - الكورنيش</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="nakheel-mall"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="تجاري" data-project="international-business">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
                             alt="مشروع مكاتب" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -468,13 +446,13 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">مركز الأعمال الدولي</h3>
                             <p class="text-gray-600 mb-4"><i
                                     class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الرياض - العليا</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="international-business"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
-                    <div
-                        class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 project-item"
+                        data-category="صناعي" data-project="industrial-complex">
                         <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&h=400&fit=crop"
                             alt="مشروع مصنع" class="w-full h-64 object-cover">
                         <div class="p-6">
@@ -483,8 +461,8 @@
                             <h3 class="text-xl font-bold text-blue-900 mb-2">مجمع المصانع الصناعي</h3>
                             <p class="text-gray-600 mb-4"><i
                                     class="fas fa-map-marker-alt text-orange-500 ml-2"></i>الجبيل - المنطقة الصناعية</p>
-                            <a href="#project-details"
-                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">تفاصيل
+                            <a href="#project-details" data-project="industrial-complex"
+                                class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 project-link">تفاصيل
                                 المشروع</a>
                         </div>
                     </div>
@@ -509,7 +487,7 @@
                                         alt="صورة المشروع 2" class="w-full h-96 object-cover">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1590496793907-4d0b8e5d0e8e?w=1200&h=600&fit=crop"
+                                    <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=200&h=150&fit=crop"
                                         alt="صورة المشروع 3" class="w-full h-96 object-cover">
                                 </div>
                                 <div class="swiper-slide">
@@ -531,7 +509,7 @@
                                         alt="صورة مصغرة 2" class="w-full h-24 object-cover rounded">
                                 </div>
                                 <div class="swiper-slide cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1590496793907-4d0b8e5d0e8e?w=200&h=150&fit=crop"
+                                    <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=200&h=150&fit=crop"
                                         alt="صورة مصغرة 3" class="w-full h-24 object-cover rounded">
                                 </div>
                                 <div class="swiper-slide cursor-pointer">
@@ -562,7 +540,7 @@
                             </div>
                             <div class="bg-white p-8 rounded-lg shadow-lg">
                                 <h2 class="text-2xl font-bold text-blue-900 mb-4">مراحل التنفيذ</h2>
-                                <div class="space-y-4">
+                                <div id="project-stages" class="space-y-4">
                                     <div class="flex items-start space-x-reverse space-x-4">
                                         <div
                                             class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -610,10 +588,10 @@
                         </div>
 
                         <!-- Sidebar -->
-                        <div class="lg:col-span-1">
-                            <div class="bg-white p-6 rounded-lg shadow-lg mb-6 sticky top-24">
+                        <div class="lg:col-span-1 sticky top-24">
+                            <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
                                 <h3 class="text-xl font-bold text-blue-900 mb-6">تفاصيل المشروع</h3>
-                                <div class="space-y-4">
+                                <div id="project-sidebar-details" class="space-y-4">
                                     <div class="flex items-center justify-between pb-4 border-b border-gray-200">
                                         <span class="text-gray-600">الموقع</span>
                                         <span class="font-semibold text-blue-900">الرياض - حي النرجس</span>
@@ -696,8 +674,8 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold mb-2">البريد الإلكتروني</h4>
-                                        <a href="mailto:info@company.com"
-                                            class="hover:text-orange-500 transition duration-300">info@company.com</a>
+                                        <a href="mailto:mohamedabdulmajeed217@gmail.com"
+                                            class="hover:text-orange-500 transition duration-300">mohamedabdulmajeed217@gmail.com</a>
                                     </div>
                                 </div>
                                 <div class="flex items-start space-x-reverse space-x-4">
@@ -707,8 +685,8 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold mb-2">الهاتف</h4>
-                                        <a href="tel:+21032156290"
-                                            class="hover:text-orange-500 transition duration-300">+210 321 56290</a>
+                                        <a href="tel:+201032156290"
+                                            class="hover:text-orange-500 transition duration-300">+20 103 215 6290</a>
                                     </div>
                                 </div>
                             </div>
@@ -737,28 +715,28 @@
                     <!-- Contact Form -->
                     <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-bold text-blue-900 mb-6">أرسل لنا رسالة</h3>
-                        <form class="space-y-6">
+                        <form id="contact-form" #contactForm="ngForm" (ngSubmit)="submitContact()" class="space-y-6">
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">الاسم الكامل</label>
-                                <input type="text"
+                                <input type="text" name="name"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
                                     placeholder="أدخل اسمك الكامل">
                             </div>
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
-                                <input type="email"
+                                <input type="email" name="email"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
                                     placeholder="example@email.com">
                             </div>
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">الموضوع</label>
-                                <input type="text"
+                                <input type="text" name="subject"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
                                     placeholder="موضوع الرسالة">
                             </div>
                             <div>
                                 <label class="block text-gray-700 font-semibold mb-2">الرسالة</label>
-                                <textarea rows="5"
+                                <textarea rows="5" name="message"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition duration-300"
                                     placeholder="اكتب رسالتك هنا..."></textarea>
                             </div>
@@ -766,11 +744,11 @@
                                 class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-lg transition duration-300 transform hover:scale-105">إرسال</button>
                         </form>
                         <div class="mt-6">
-                            <a href="https://wa.me/+21032156290?text=السلام%20عليكم" target="_blank"
+                            <button id="whatsapp-btn"
                                 class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg text-center transition duration-300 transform hover:scale-105">
                                 <i class="fab fa-whatsapp text-xl ml-2"></i>
                                 إرسال عبر واتساب
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -832,12 +810,199 @@
         </footer>
 
         <!-- Floating WhatsApp Button -->
-        <a href="https://wa.me/+21032156290" target="_blank"
+        <a href="https://wa.me/201032156290" target="_blank"
             class="fixed bottom-6 left-6 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-2xl transition duration-300 transform hover:scale-110 z-50">
             <i class="fab fa-whatsapp text-3xl"></i>
         </a>
 
     </div>
+
+    <script>
+        const stages = [
+            { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+            { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+            { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+            { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+        ];
+
+        const projects = {
+            yasmin: {
+                title: "مجمع الياسمين السكني",
+                location: "الرياض - حي النرجس",
+                startDate: "يناير 2022",
+                endDate: "يونيو 2023",
+                units: "50 وحدة",
+                area: "15,000 م²",
+                images: 24,
+                description1: "مجمع الياسمين السكني هو مشروع سكني متكامل يقع في حي النرجس بالرياض، يضم 50 وحدة سكنية فاخرة تم تصميمها وفق أحدث المعايير العالمية. المشروع يتميز بموقعه الاستراتيجي وقربه من جميع الخدمات الأساسية.",
+                description2: "تم استخدام أفضل مواد البناء والتشطيب في تنفيذ المشروع، مع الحرص على تطبيق أعلى معايير الجودة والسلامة في جميع مراحل العمل. المشروع يشمل مرافق متكاملة تضم حدائق، مواقف سيارات، وأنظمة أمن متطورة.",
+                description3: "استغرق تنفيذ المشروع 18 شهراً من العمل المتواصل، وتم تسليمه للعملاء في الموعد المحدد بجودة تفوق التوقعات. المشروع حاز على رضا تام من جميع العملاء وأصبح نموذجاً يحتذى به في المنطقة.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            },
+            'business-tower': {
+                title: "برج الأعمال التجاري",
+                location: "جدة - الكورنيش",
+                startDate: "مارس 2021",
+                endDate: "ديسمبر 2022",
+                units: "120 مكتب",
+                area: "25,000 م²",
+                images: 30,
+                description1: "برج الأعمال التجاري هو مشروع تجاري حديث يقع في قلب جدة على الكورنيش، يضم 120 مكتباً تجارياً بتصاميم عصرية ومرافق متطورة.",
+                description2: "تم بناء البرج بأحدث التقنيات الهندسية مع التركيز على الاستدامة البيئية والكفاءة الطاقية. يشمل المشروع مواقف متعددة الطوابق وأنظمة أمان متكاملة.",
+                description3: "استغرق تنفيذ المشروع 21 شهراً، وتم تسليمه بنجاح ليصبح أحد أبرز المعالم التجارية في المدينة.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            },
+            'oasis-villas': {
+                title: "فلل الواحة الراقية",
+                location: "الدمام - حي الشاطئ",
+                startDate: "يونيو 2022",
+                endDate: "فبراير 2024",
+                units: "25 فيلا",
+                area: "20,000 م²",
+                images: 28,
+                description1: "فلل الواحة الراقية هو مشروع سكني فاخر يقع في حي الشاطئ بالدمام، يضم 25 فيلا بتصاميم عصرية ومساحات واسعة.",
+                description2: "تم تصميم الفلل لتوفر أقصى درجات الراحة والخصوصية مع إطلالات بحرية رائعة. يشمل المشروع حدائق خاصة ومسابح فردية.",
+                description3: "استغرق المشروع 20 شهراً من العمل الدقيق، وتم تسليمه بجودة عالية ليلبي توقعات العملاء الأرقى.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            },
+            'nakheel-mall': {
+                title: "مول النخيل التجاري",
+                location: "الخبر - الكورنيش",
+                startDate: "أكتوبر 2020",
+                endDate: "أغسطس 2022",
+                units: "200 محل",
+                area: "35,000 م²",
+                images: 40,
+                description1: "مول النخيل التجاري هو مركز تجاري متكامل في الخبر، يضم 200 محل تجاري وترفيهي بتصاميم حديثة.",
+                description2: "يتميز المول بموقعه المتميز على الكورنيش مع إطلالات على الخليج العربي. يشمل مناطق ترفيهية ومطاعم متنوعة.",
+                description3: "تم تنفيذ المشروع في 22 شهراً، وأصبح وجهة تجارية رئيسية في المنطقة.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            },
+            'international-business': {
+                title: "مركز الأعمال الدولي",
+                location: "الرياض - العليا",
+                startDate: "فبراير 2023",
+                endDate: "نوفمبر 2024",
+                units: "80 مكتب",
+                area: "18,000 م²",
+                images: 25,
+                description1: "مركز الأعمال الدولي هو برج أعمال في قلب الرياض، يضم 80 مكتباً بمعايير دولية.",
+                description2: "تم تصميم المركز ليوفر بيئة عمل مثالية مع تقنيات حديثة ومرافق متكاملة.",
+                description3: "استغرق المشروع 21 شهراً، وتم تسليمه ليخدم قطاع الأعمال في المملكة.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            },
+            'industrial-complex': {
+                title: "مجمع المصانع الصناعي",
+                location: "الجبيل - المنطقة الصناعية",
+                startDate: "أبريل 2021",
+                endDate: "سبتمبر 2023",
+                units: "15 مصنع",
+                area: "50,000 م²",
+                images: 35,
+                description1: "مجمع المصانع الصناعي هو منطقة صناعية متكاملة في الجبيل، تضم 15 مصنعاً ببنية تحتية متقدمة.",
+                description2: "تم تصميم المجمع لدعم الصناعات المختلفة مع مرافق لوجستية وطاقة متجددة.",
+                description3: "استغرق تنفيذ المشروع 29 شهراً، وأصبح مركزاً صناعياً رئيسياً.",
+                stages: [
+                    { title: "التخطيط والتصميم", desc: "إعداد المخططات الهندسية والحصول على التراخيص اللازمة" },
+                    { title: "الأعمال الإنشائية", desc: "تنفيذ الأساسات والهيكل الخرساني للمباني" },
+                    { title: "أعمال التشطيب", desc: "تركيب الأنظمة الكهربائية والصحية والتشطيبات الداخلية" },
+                    { title: "التسليم والضمان", desc: "فحص نهائي وتسليم الوحدات مع ضمان شامل" }
+                ]
+            }
+        };
+
+        function updateProjectDetails(projectKey) {
+            const data = projects[projectKey];
+            if (!data) return;
+
+            // Update title
+            document.querySelector('#project-details h1').textContent = data.title;
+
+            // Update sidebar details
+            const details = document.querySelectorAll('#project-sidebar-details > div');
+            details[0].querySelector('span:last-child').textContent = data.location;
+            details[1].querySelector('span:last-child').textContent = data.startDate;
+            details[2].querySelector('span:last-child').textContent = data.endDate;
+            details[3].querySelector('span:last-child').textContent = data.units;
+            details[4].querySelector('span:last-child').textContent = data.area;
+            details[5].querySelector('span:last-child').textContent = data.images + ' صورة';
+
+            // Update description
+            const descParas = document.querySelectorAll('#project-details .bg-white p');
+            descParas[0].textContent = data.description1;
+            descParas[1].textContent = data.description2;
+            descParas[2].textContent = data.description3;
+
+            // Update stages (static)
+            const stageDivs = document.querySelectorAll('#project-stages > div');
+            stages.forEach((stage, index) => {
+                if (stageDivs[index]) {
+                    stageDivs[index].querySelector('h3').textContent = stage.title;
+                    stageDivs[index].querySelector('p').textContent = stage.desc;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectsLinks = document.querySelectorAll('.project-link');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.getAttribute('data-filter');
+
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-orange-500', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-orange-500', 'text-white');
+
+                    const projectItems = document.querySelectorAll('.project-item');
+                    projectItems.forEach(project => {
+                        if (category === 'all' || project.getAttribute('data-category') === category) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            projectsLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const project = this.getAttribute('data-project');
+                    updateProjectDetails(project);
+                });
+            });
+        });
+    </script>
 
     <script defer src="scripts.js"></script>
 
